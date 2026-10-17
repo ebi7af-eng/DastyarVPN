@@ -1,0 +1,6 @@
+{
+  "name": "DastyarVPN",
+  "description": "Cyber-modern VPN with animated particle ring status, real-time bandwidth meter, and server switching.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
