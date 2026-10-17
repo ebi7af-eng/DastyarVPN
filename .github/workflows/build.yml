@@ -13,22 +13,16 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v4
 
-    - name: Set up JDK 17
+    - name: Set up JDK 11
       uses: actions/setup-java@v4
       with:
-        java-version: '17'
+        java-version: '11'
         distribution: 'temurin'
 
-    - name: Setup Gradle
-      uses: gradle/actions/setup-gradle@v3
-
-    - name: Fix gradlew permissions
+    - name: Build APK with Stacktrace
       run: |
         chmod +x ./gradlew
-
-    - name: Build APK with Gradle
-      run: |
-        ./gradlew assembleDebug --stacktrace
+        ./gradlew assembleDebug --info
 
     - name: Upload APK Artifact
       uses: actions/upload-artifact@v4
